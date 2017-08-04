@@ -1,7 +1,10 @@
 /.idea
 *.iml
 */target/
+*/build/
 */.mvn/
+*/.gradle
+.gradle
 
 # Compiled class file
 *.class
