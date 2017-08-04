@@ -43,6 +43,7 @@
 
     <modules>
         <module>rest-service</module>
+        <module>schedule-tasks</module>
     </modules>
 
 
