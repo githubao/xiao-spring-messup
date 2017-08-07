@@ -81,6 +81,7 @@
         <module>spring-boot</module>
         <module>relational-data-access</module>
         <module>authenticating-ldap</module>
+        <module>messaging-rabbitmq</module>
     </modules>
 
 
