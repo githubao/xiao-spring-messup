@@ -1,0 +1,1 @@
+"D:\win\dev\spring-1.5.6.RELEASE\bin\spring.bat" run app.groovy
