@@ -8,3 +8,4 @@ all about spring
 - consuming-rest-angularjs
 - spring-boot
 - relational-data-access
+- authenticating-ldap

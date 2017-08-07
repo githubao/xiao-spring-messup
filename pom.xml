@@ -80,6 +80,7 @@
         <module>consuming-rest</module>
         <module>spring-boot</module>
         <module>relational-data-access</module>
+        <module>authenticating-ldap</module>
     </modules>
 
 
