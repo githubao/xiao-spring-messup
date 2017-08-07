@@ -1,0 +1,10 @@
+http://localhost:8080/errors
+http://localhost:8080/environment
+http://localhost:8080/health
+http://localhost:8080/beans
+http://localhost:8080/info
+http://localhost:8080/metrics
+http://localhost:8080/trace
+http://localhost:8080/configprops
+http://localhost:8080/dump
+http://localhost:8080/shutdown
