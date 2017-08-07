@@ -1,3 +1,0 @@
-## !! CAUTION !!
-
-compile un pass, i have no patients to solve it...

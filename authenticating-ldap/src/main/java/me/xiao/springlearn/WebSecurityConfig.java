@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.ldap.DefaultSpringSecurityContextSource;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * 安全配置模式
@@ -22,18 +23,18 @@ import java.util.Arrays;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.ldapAuthentication().userDnPatterns("uid={0},ou=people")
-//                .groupSearchBase("ou=groups")
-//                .contextSource(contextSource())
-//                .passwordCompare()
-//                .passwordEncoder(new LdapShaPasswordEncoder())
-//                .passwordAttribute("userPassword");
+        auth.ldapAuthentication().userDnPatterns("uid={0},ou=people")
+                .groupSearchBase("ou=groups")
+                .contextSource(contextSource())
+                .passwordCompare()
+                .passwordEncoder(new LdapShaPasswordEncoder())
+                .passwordAttribute("userPassword");
 
-        auth.ldapAuthentication().contextSource().url("ldap://localhost:8389/dc=example,dc=com")
-                .managerDn("uid=admin,ou=system").managerPassword("secret")
-                .and()
-                .userSearchBase("ou=users")
-                .userSearchFilter("(cn={0})");
+//        auth.ldapAuthentication().contextSource().url("ldap://localhost:8389/dc=example,dc=com")
+//                .managerDn("uid=admin,ou=system").managerPassword("secret")
+//                .and()
+//                .userSearchBase("ou=users")
+//                .userSearchFilter("(cn={0})");
     }
 
     @Override
@@ -43,7 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public DefaultSpringSecurityContextSource contextSource() {
-//        return new DefaultSpringSecurityContextSource(Arrays.asList("ldap://localhost:8389/", "dc=springframework,dc=org"));
-        return new DefaultSpringSecurityContextSource("ldap://localhost:8389/dc=springframework,dc=org");
+        return new DefaultSpringSecurityContextSource(Collections.singletonList("ldap://localhost:8389/"), "dc=springframework,dc=org");
+//        return new DefaultSpringSecurityContextSource("ldap://localhost:8389/dc=springframework,dc=org");
     }
 }
